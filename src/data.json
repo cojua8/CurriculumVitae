@@ -33,9 +33,9 @@
     }
   ],
   "profile": [
-    "Egresado de Ingeniería Civil en la UTFSM. Me motiva la resolución de problemas y el trabajo en grupo, lo que he podido desarrollar a través de mis pasatiempos que son los juegos de mesa y de video, principalmente.",
-    "Me he desarrollado profesionalmente como ingeniero de software, carrera que me motiva y que me permite aprender constantemente.",
-    "Me interesa también la participación en organizaciones que sean un aporte en el mejoramiento de la sociedad."
+    "Egresado de Ingeniería Civil en la UTFSM. Me motiva la resolución de problemas y el trabajo en equipo, lo que me ha llevado a desarrollar un especial interés en la ingeniería de software, industria en la que me he desempeñado profesionalmente desde 2021",
+    "Mis pasatiempos incluyen la lectura, los juegos de video y tambien los juegos de mesa.",
+    "Como parte de organizaciones, me interesa sobre todo mantener buenas relaciones humanas, y hacer que los espacios de trabajo sean agradables para todos."
   ],
   "skills": [
     "Python",
@@ -59,35 +59,60 @@
   ],
   "experience": [
     {
+      "icon": { "name": "briefcase" },
+      "title": "Experiencia Laboral",
+      "items": [
+        {
+          "company": "Houm, Chile",
+          "title": "Ingeniero de software",
+          "dateFrom": "Diciembre 2021",
+          "dateTo": "Actualidad",
+          "activities": [
+            {
+              "description": "Diseño, implementación y testeo de nuevas funcionalidades en el backend, especificamente en el módulo de pagos."
+            },
+            {
+              "description": "Implementación de la pasarela de pagos Khipu."
+            },
+            {
+              "description": "Implementación de comunicaciones de cara a usuarios de la plataforma."
+            }
+          ]
+        },
+        {
+          "company": "Momenta SA, Chile",
+          "title": "Desarrollador - Ingeniero de proyectos",
+          "dateFrom": "Marzo 2020",
+          "dateTo": "Actualidad",
+          "activities": [
+            {
+              "description": "Desarrollo de software para uso interno por parte de proyectistas e ingenieros: Plugins y scripts para software de terceros, software de diseño de muros y verificación de modelos."
+            },
+            {
+              "description": "Generación de modelos estructurales de edificios habitacionales y detección de problemas de estructuración."
+            }
+          ]
+        },
+        {
+          "company": "Universidad Técnica Federico Santa María, Chile",
+          "title": "Ayundatías universitarias",
+          "dateFrom": "2014",
+          "dateTo": "2016",
+          "activities": [
+            {
+              "description": "Ayudantías de carrera: Análisis Estructural (2), Dinámica de Estructuras (1), Hormigón Armado (1) y Diseño en Acero (1)."
+            },
+            {
+              "description": "Ayudantías de laboratorio: Wolfram Mathematica (3) y MATLAB (1)."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "icon": { "name": "book" },
       "title": "Educación",
       "items": [
-        {
-          "company": "Udemy-Udacity",
-          "title": "Otros cursos sobre desarrollo",
-          "dateFrom": "2020",
-          "dateTo": null,
-          "activities": [
-            {
-              "description": "React JS (Udemy): Conceptos básicos de React JS."
-            },
-            { "description": "C# (Udemy): Conceptos básicos de C# y WPF." },
-            {
-              "description": "Developing Android Apps with Kotlin (Udacity): Conceptos de desarrollo de aplicaciones para Android con Kotlin."
-            }
-          ]
-        },
-        {
-          "company": "Uabierta - Uchile",
-          "title": "Cambio Climático",
-          "dateFrom": "2020",
-          "dateTo": null,
-          "activities": [
-            {
-              "description": "Curso introductorio al cambio climático, explica conceptos y avances en los estudios al respecto"
-            }
-          ]
-        },
         {
           "company": "Coursera - UCSD",
           "title": "Data Structures and Algorithms",
@@ -117,52 +142,18 @@
           "dateTo": null,
           "activities": [
             {
-              "description": "Trabajo de título: Simulación numérica de transporte de fondo con doble acoplamiento en un canal turbulento."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "icon": { "name": "briefcase" },
-      "title": "Experiencia Laboral",
-      "items": [
-        {
-          "company": "Momenta SA, Chile",
-          "title": "Desarrollador - Ingeniero de proyectos",
-          "dateFrom": "Marzo 2020",
-          "dateTo": "Actualidad",
-          "activities": [
-            {
-              "description": "Desarrollo de software para uso interno por parte de proyectistas e ingenieros: Plugins y scripts para software de terceros, software de diseño de muros y verificación de modelos."
-            },
-            {
-              "description": "Generación de modelos estructurales de edificios habitacionales y detección de problemas de estructuración."
+              "description": "Trabajo de título: Simulación numérica de transporte de fondo con doble acoplamiento en un canal turbulento. Para esto se utilizó y modificó parte del código del software de código abierto OpenFOAM, y se realizaron simulaciones en Leftraru del NLHCP."
             }
           ]
         },
         {
-          "company": "Louis Berger SA, Chile",
-          "title": "Práctica profesional",
-          "dateFrom": "Abril 2017",
-          "dateTo": "Junio 2017",
+          "company": "",
+          "title": "Otros",
+          "dateFrom": "2020",
+          "dateTo": null,
           "activities": [
             {
-              "description": "Desarrollo de proyectos de ingeniería vial, estudio de procesos de sedimentación y estudio en terreno de sistema de alcantarillado y drenaje"
-            }
-          ]
-        },
-        {
-          "company": "Universidad Técnica Federico Santa María, Chile",
-          "title": "Ayundatías universitarias",
-          "dateFrom": "2014",
-          "dateTo": "2016",
-          "activities": [
-            {
-              "description": "Ayudantías de carrera: Análisis Estructural (2), Dinámica de Estructuras (1), Hormigón Armado (1) y Diseño en Acero (1)."
-            },
-            {
-              "description": "Ayudantías de laboratorio: Wolfram Mathematica (3) y MATLAB (1)."
+              "description": "Curso introductorio al cambio climático, explica conceptos y avances en los estudios al respecto. Impartido por Uabierta de la Universidad de Chile."
             }
           ]
         }
@@ -178,17 +169,17 @@
           "dateFrom": "2019",
           "activities": [
             {
-              "description": "Tesorero del club, participación en fondos concursables de la municipalidad de Las Condes, para financiamiento de indumentaria."
+              "description": "Participación en fondos concursables de la municipalidad de Las Condes, para financiamiento de indumentaria."
             }
           ]
         },
         {
           "company": "CEIC, Universidad Técnica Federico Santa María, Chile",
-          "title": "Secretario General",
+          "title": "Secretario General CEIC",
           "dateFrom": "2015",
           "activities": [
             {
-              "description": "Participación y organización de actividades del Centro de Estudiantes de Ingeniería Civil de la UTFSM."
+              "description": "Organización y participación de actividades del Centro de Estudiantes de Ingeniería Civil."
             }
           ]
         }
