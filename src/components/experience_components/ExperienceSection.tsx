@@ -13,7 +13,7 @@ const ExperienceSection = ({ icon, title, items }: ExperienceSectionProps) => {
         <p className="font-bold">{title}</p>
       </div>
       <hr />
-      {items.map((item: ExperienceItemProps) => {
+      {items.map((item: ExperienceItemProps, index) => {
         return (
           <ExperienceItem
             company={item.company}
@@ -21,6 +21,7 @@ const ExperienceSection = ({ icon, title, items }: ExperienceSectionProps) => {
             dateFrom={item.dateFrom}
             dateTo={item.dateTo}
             activities={item.activities}
+            key={index}
           />
         );
       })}

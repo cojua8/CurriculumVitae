@@ -14,8 +14,8 @@ const Skills = () => {
   return (
     <div>
       <div className="flex flex-row flex-wrap justify-start">
-        {skillData.map((v: string) => {
-          return <Skill name={v} />;
+        {skillData.map((v: string, index) => {
+          return <Skill name={v} key={index} />;
         })}
       </div>
     </div>

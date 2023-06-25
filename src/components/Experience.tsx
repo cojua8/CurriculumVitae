@@ -7,9 +7,18 @@ const Experience = () => {
     useContext(dataContext).experience;
   return (
     <div>
-      {experience.map(({ icon, title, items }: ExperienceSectionProps) => {
-        return <ExperienceSection icon={icon} title={title} items={items} />;
-      })}
+      {experience.map(
+        ({ icon, title, items }: ExperienceSectionProps, index) => {
+          return (
+            <ExperienceSection
+              icon={icon}
+              title={title}
+              items={items}
+              key={index}
+            />
+          );
+        }
+      )}
     </div>
   );
 };

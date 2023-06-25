@@ -2,12 +2,12 @@ import { useContext } from "react";
 import { dataContext } from "../contexts/DataContext";
 
 const Profile = () => {
-  const profileData = useContext(dataContext).profile;
+  const profileData: string[] = useContext(dataContext).profile;
 
   return (
     <div>
-      {profileData.map((paragraph: string) => {
-        return <p>{paragraph}</p>;
+      {profileData.map((paragraph: string, index) => {
+        return <p key={index}>{paragraph}</p>;
       })}
     </div>
   );

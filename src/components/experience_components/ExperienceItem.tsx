@@ -18,8 +18,12 @@ const ExperienceItem = ({
       </p>
       <p className="text-xl font-semibold">{title}</p>
       <ul className="ml-3">
-        {activities.map(({ description }: ExperienceActivityProps) => {
-          return <li className="text-sm">{description}</li>;
+        {activities.map(({ description }: ExperienceActivityProps, index) => {
+          return (
+            <li className="text-sm" key={index}>
+              {description}
+            </li>
+          );
         })}
       </ul>
     </div>
