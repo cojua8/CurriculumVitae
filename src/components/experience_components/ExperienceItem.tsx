@@ -12,10 +12,10 @@ const ExperienceItem = ({
 }: ExperienceItemProps) => {
   return (
     <div className="pl-3 pb-3 pt-1 hover:bg-zinc-100">
-      <p className="flex flex-row items-center justify-between text-[10px] mb-[-5px]">
+      <div className="flex flex-row items-center justify-between text-[12px] mb-[-5px]">
         <p>{dateTo ? `${dateFrom} -  ${dateTo}` : dateFrom}</p>
         <p>{company}</p>
-      </p>
+      </div>
       <p className="text-xl font-semibold">{title}</p>
       <ul className="ml-3">
         {activities.map(({ description }: ExperienceActivityProps, index) => {
