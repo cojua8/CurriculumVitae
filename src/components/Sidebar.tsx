@@ -7,7 +7,9 @@ import Skills from "./sidebar_components/Skills";
 const Sidebar = () => {
   return (
     <div>
-      <p className="text-[50px] mb-7 font-bold">Joaquín Neira Jaeger</p>
+      <p className="text-6xl md:text-4xl mb-7 font-bold">
+        Joaquín Neira Jaeger
+      </p>
 
       <SidebarItem>
         <PersonalData />
