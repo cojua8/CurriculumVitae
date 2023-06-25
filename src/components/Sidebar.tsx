@@ -7,7 +7,7 @@ import Skills from "./sidebar_components/Skills";
 const Sidebar = () => {
   return (
     <div>
-      <p className="text-6xl md:text-4xl mb-7 font-bold">
+      <p className="text-4xl lg:text-5xl mb-7 font-bold">
         Joaquín Neira Jaeger
       </p>
 
