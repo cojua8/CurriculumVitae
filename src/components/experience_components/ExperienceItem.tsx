@@ -1,12 +1,7 @@
-import { ExperienceActivityProps } from "./ExperienceActivity";
-
-interface ExperienceItemProps {
-  title: string;
-  company: string;
-  dateFrom: string;
-  dateTo?: string;
-  activities: ExperienceActivityProps[];
-}
+import {
+  ExperienceActivityProps,
+  ExperienceItemProps,
+} from "../contexts/DataContext";
 
 const ExperienceItem = ({
   company,
@@ -31,5 +26,4 @@ const ExperienceItem = ({
   );
 };
 
-export type { ExperienceItemProps };
 export default ExperienceItem;

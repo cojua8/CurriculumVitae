@@ -1,11 +1,18 @@
+import { useContext } from "react";
+import { LanguageProps, dataContext } from "../contexts/DataContext";
+
 const Languages = () => {
+  const languageData = useContext(dataContext).languages;
   return (
-    <div>
-      <ul>
-        <li>Español: Nativo</li>
-        <li>Inglés: Intermedio</li>
-      </ul>
-    </div>
+    <ul>
+      {languageData.map(({ name, level }: LanguageProps) => {
+        return (
+          <li>
+            {name}: {level}
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

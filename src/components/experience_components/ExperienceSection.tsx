@@ -1,18 +1,15 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ExperienceItem, { ExperienceItemProps } from "./ExperienceItem";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-
-interface ExperienceSectionProps {
-  icon: IconDefinition;
-  title: string;
-  items: ExperienceItemProps[];
-}
+import ExperienceItem from "./ExperienceItem";
+import {
+  ExperienceItemProps,
+  ExperienceSectionProps,
+} from "../contexts/DataContext";
+import Icon from "../Icon";
 
 const ExperienceSection = ({ icon, title, items }: ExperienceSectionProps) => {
   return (
     <div className="mb-5 ">
       <div className="flex flex-row text-2xl items-center">
-        <FontAwesomeIcon className="h-6 w-6 mr-2" icon={icon} />
+        <Icon name={icon.name} family={icon.family} style={icon.style} />
         <p className="font-bold">{title}</p>
       </div>
       <hr />
@@ -31,5 +28,4 @@ const ExperienceSection = ({ icon, title, items }: ExperienceSectionProps) => {
   );
 };
 
-export type { ExperienceSectionProps };
 export default ExperienceSection;

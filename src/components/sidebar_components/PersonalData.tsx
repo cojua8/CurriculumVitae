@@ -1,39 +1,48 @@
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { useContext } from "react";
 import {
-  faCakeCandles,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+  EmailPersonalData,
+  IconParams,
+  PersonalDataContextProps,
+  StringPersonalData,
+  UrlPersonalData,
+  dataContext,
+} from "../contexts/DataContext";
+import Icon from "../Icon";
 
 interface PersonalDataProps {
-  icon: IconDefinition;
+  icon: IconParams;
   value: JSX.Element | string;
 }
 
-const data: PersonalDataProps[] = [
-  { icon: faCakeCandles, value: "22 de octubre de 1992" },
-  { icon: faLocationDot, value: "Ñuñoa, Santiago, Chile" },
-  {
-    icon: faEnvelope,
-    value: <a href="mailto: jn.cv@sent.com">jn.cv@sent.com</a>,
-  },
-  { icon: faGithub, value: <a href="https://github.com/cojua8">cojua8</a> },
-  {
-    icon: faLinkedin,
-    value: <a href="https://www.linkedin.com/in/jneiraj/">jneiraj</a>,
-  },
-];
+function setTag(
+  data: StringPersonalData | EmailPersonalData | UrlPersonalData
+) {
+  if (data.type === "text") {
+    return data.value;
+  } else if (data.type === "email") {
+    return <a href="mailto: {v.value}">{data.value}</a>;
+  } else if (data.type === "url") {
+    return <a href={data.value}>{data.showName}</a>;
+  }
+  throw new Error("Unknown personal data type");
+}
 
 const PersonalData = () => {
+  const contextData = useContext(dataContext).personalData;
+
+  const data: PersonalDataProps[] = contextData.map(
+    ({ icon, value }: PersonalDataContextProps) => {
+      return { icon: icon, value: setTag(value) };
+    }
+  );
+
   return (
     <ul className="list-none">
       {data.map(({ icon, value }: PersonalDataProps) => {
         return (
           <li className="mt-3">
             <div className="flex flex-row">
-              <FontAwesomeIcon className="h-6 w-6 mr-5" icon={icon} />
+              <Icon name={icon.name} family={icon.family} style={icon.style} />
               <div>{value}</div>
             </div>
           </li>
