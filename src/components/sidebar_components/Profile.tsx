@@ -7,7 +7,11 @@ const Profile = () => {
   return (
     <div>
       {profileData.map((paragraph: string, index) => {
-        return <p key={index}>{paragraph}</p>;
+        return (
+          <p key={index} className="mb-2">
+            {paragraph}
+          </p>
+        );
       })}
     </div>
   );
