@@ -1,3 +1,4 @@
+import React from "react";
 import { PropsWithChildren } from "react";
 
 interface SidebarItemProps {
@@ -12,21 +13,14 @@ const SidebarItem = ({
     return null;
   }
 
-  const titleDiv = (): JSX.Element | undefined => {
-    if (!title) {
-      return;
-    }
-    return (
-      <div className="mb-2">
-        <div className="font-bold text-2xl">{title}</div>
-        <hr />
-      </div>
-    );
-  };
-
   return (
     <div className="mb-5">
-      {titleDiv()}
+      {title ? (
+        <div className="mb-2">
+          <div className="font-bold text-2xl">{title}</div>
+          <hr />
+        </div>
+      ) : null}
       <div className="ml-2">{children}</div>
     </div>
   );

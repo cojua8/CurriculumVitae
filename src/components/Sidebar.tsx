@@ -1,7 +1,6 @@
 import Languages from "./sidebar_components/Languages";
 import PersonalData from "./sidebar_components/PersonalData";
 import Profile from "./sidebar_components/Profile";
-import References from "./sidebar_components/References";
 import SidebarItem from "./sidebar_components/SidebarItem";
 import Skills from "./sidebar_components/Skills";
 
@@ -23,8 +22,6 @@ const Sidebar = () => {
       <SidebarItem title="Idiomas">
         <Languages />
       </SidebarItem>
-
-      <SidebarItem title="Referencias">{/* <References /> */}</SidebarItem>
     </div>
   );
 };
