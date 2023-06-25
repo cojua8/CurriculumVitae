@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CurriculumVitae/static/css/main.a07840c4.css",
-    "main.js": "/CurriculumVitae/static/js/main.50cee5cc.js",
+    "main.css": "/CurriculumVitae/static/css/main.4b2f36a8.css",
+    "main.js": "/CurriculumVitae/static/js/main.ce81c399.js",
     "static/js/787.28cb0dcd.chunk.js": "/CurriculumVitae/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/CurriculumVitae/index.html",
-    "main.a07840c4.css.map": "/CurriculumVitae/static/css/main.a07840c4.css.map",
-    "main.50cee5cc.js.map": "/CurriculumVitae/static/js/main.50cee5cc.js.map",
+    "main.4b2f36a8.css.map": "/CurriculumVitae/static/css/main.4b2f36a8.css.map",
+    "main.ce81c399.js.map": "/CurriculumVitae/static/js/main.ce81c399.js.map",
     "787.28cb0dcd.chunk.js.map": "/CurriculumVitae/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a07840c4.css",
-    "static/js/main.50cee5cc.js"
+    "static/css/main.4b2f36a8.css",
+    "static/js/main.ce81c399.js"
   ]
 }
