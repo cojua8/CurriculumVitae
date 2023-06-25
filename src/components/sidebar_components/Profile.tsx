@@ -1,7 +1,6 @@
 const Profile = () => {
   return (
     <div>
-      <h1>Perfil</h1>
       <p>
         Egresado de Ingeniería Civil en la UTFSM. Me motiva la resolución de
         problemas y el trabajo en grupo, lo que he podido desarrollar a través

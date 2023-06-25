@@ -1,11 +1,11 @@
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
-  IconDefinition,
   faCakeCandles,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 interface PersonalDataProps {
   icon: IconDefinition;
@@ -29,11 +29,11 @@ const data: PersonalDataProps[] = [
 const PersonalData = () => {
   return (
     <ul className="list-none">
-      {data.map(({ icon: iconName, value }: PersonalDataProps) => {
+      {data.map(({ icon, value }: PersonalDataProps) => {
         return (
           <li className="mt-3">
             <div className="flex flex-row">
-              <FontAwesomeIcon className="h-6 w-6 mr-5" icon={iconName} />
+              <FontAwesomeIcon className="h-6 w-6 mr-5" icon={icon} />
               <div>{value}</div>
             </div>
           </li>

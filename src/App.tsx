@@ -1,21 +1,16 @@
-import PersonalData from "./components/PersonalData";
-import Profile from "./components/Profile";
-import References from "./components/References";
-import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
     <div className="grid">
-      <div className="grid grid-cols-5">
-        <div className="col-span-2 bg-zinc-100">
-          <p className="text-2xl">Joaquín Neira Jaeger</p>
-
-          <PersonalData />
-          <Profile />
-          <Skills />
-          <References />
+      <div className="grid grid-cols-8">
+        <div className="col-span-2 p-3 bg-zinc-100">
+          <Sidebar />
         </div>
-        <div></div>
+        <div className="col-span-6 p-3">
+          <Experience />
+        </div>
       </div>
     </div>
   );
