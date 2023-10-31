@@ -28,7 +28,7 @@ function setTag(
 }
 
 const PersonalData = () => {
-  const contextData = useContext(dataContext).personalData;
+  const contextData = useContext(dataContext).personalData.personalDataItems;
 
   const data: PersonalDataProps[] = contextData.map(
     ({ icon, value }: PersonalDataContextProps) => {
