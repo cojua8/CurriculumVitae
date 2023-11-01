@@ -61,7 +61,9 @@ interface CVData {
   experience: ExperienceSectionProps[];
 }
 
-export const DataContext = createContext({} as { data: CVData });
+export const DataContext = createContext(
+  {} as { data: CVData; setData: (data: CVData) => void }
+);
 
 export type {
   CVData,

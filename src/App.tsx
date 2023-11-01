@@ -5,6 +5,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 import { CVData, DataContext } from "./components/contexts/DataContext";
+import { FileUploadButton } from "./components/FileUploadButton";
 
 library.add(fas, fab);
 
@@ -13,20 +14,15 @@ const App = () => {
 
   let [data, setData] = useState(context);
 
-  const handleClick = () => {
-    const newData: CVData = require("./data2.json");
-    console.log(newData);
-    setData(newData);
-    console.log(data);
-  };
   return (
     <div className="grid">
-      <button onClick={handleClick}>Upload data</button>
       <DataContext.Provider
         value={{
           data,
+          setData,
         }}
       >
+        <FileUploadButton />
         <div className="grid md:grid-cols-6 lg:grid-cols-8">
           <div className="md:col-span-2 p-3 bg-zinc-100">
             <Sidebar />
