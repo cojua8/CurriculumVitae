@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { ExperienceSectionProps, dataContext } from "./contexts/DataContext";
+import { ExperienceSectionProps, DataContext } from "./contexts/DataContext";
 import ExperienceSection from "./experience_components/ExperienceSection";
 
 const Experience = () => {
   const experience: ExperienceSectionProps[] =
-    useContext(dataContext).experience;
+    useContext(DataContext).data.experience;
   return (
     <div>
       {experience.map(

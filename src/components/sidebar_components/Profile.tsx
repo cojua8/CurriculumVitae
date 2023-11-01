@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { dataContext } from "../contexts/DataContext";
+import { DataContext } from "../contexts/DataContext";
 
 const Profile = () => {
-  const profileData: string[] = useContext(dataContext).profile;
+  const profileData: string[] = useContext(DataContext).data.profile;
 
   return (
     <div>

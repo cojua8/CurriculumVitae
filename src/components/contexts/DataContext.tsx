@@ -50,9 +50,21 @@ interface ExperienceSectionProps {
   items: ExperienceItemProps[];
 }
 
-const data = require("../../data.json");
-export const dataContext = createContext(data);
+interface CVData {
+  personalData: {
+    name: string;
+    personalDataItems: PersonalDataContextProps[];
+  };
+  profile: string[];
+  skills: string[];
+  languages: LanguageProps[];
+  experience: ExperienceSectionProps[];
+}
+
+export const DataContext = createContext({} as { data: CVData });
+
 export type {
+  CVData,
   PersonalDataContextProps,
   StringPersonalData,
   EmailPersonalData,

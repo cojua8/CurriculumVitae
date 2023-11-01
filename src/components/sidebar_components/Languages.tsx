@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { LanguageProps, dataContext } from "../contexts/DataContext";
+import { LanguageProps, DataContext } from "../contexts/DataContext";
 
 const Languages = () => {
-  const languageData: LanguageProps[] = useContext(dataContext).languages;
+  const languageData: LanguageProps[] = useContext(DataContext).data.languages;
   return (
     <ul>
       {languageData.map(({ name, level }: LanguageProps, index) => {

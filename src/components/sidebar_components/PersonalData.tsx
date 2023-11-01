@@ -5,7 +5,7 @@ import {
   PersonalDataContextProps,
   StringPersonalData,
   UrlPersonalData,
-  dataContext,
+  DataContext,
 } from "../contexts/DataContext";
 import Icon from "../Icon";
 
@@ -28,7 +28,8 @@ function setTag(
 }
 
 const PersonalData = () => {
-  const contextData = useContext(dataContext).personalData.personalDataItems;
+  const contextData =
+    useContext(DataContext).data.personalData.personalDataItems;
 
   const data: PersonalDataProps[] = contextData.map(
     ({ icon, value }: PersonalDataContextProps) => {

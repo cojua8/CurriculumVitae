@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { dataContext } from "../contexts/DataContext";
+import { DataContext } from "../contexts/DataContext";
 
 interface SkillProps {
   name: string;
@@ -10,7 +10,7 @@ const Skill = ({ name }: SkillProps) => {
 };
 
 const Skills = () => {
-  const skillData: string[] = useContext(dataContext).skills;
+  const skillData: string[] = useContext(DataContext).data.skills;
   return (
     <div>
       <div className="flex flex-row flex-wrap justify-start">
