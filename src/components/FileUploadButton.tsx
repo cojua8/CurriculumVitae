@@ -1,5 +1,8 @@
 import React, { ChangeEvent, useContext } from "react";
 import { DataContext } from "./contexts/DataContext";
+import Button from "./base/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export const FileUploadButton = () => {
   const { setData } = useContext(DataContext);
@@ -12,5 +15,17 @@ export const FileUploadButton = () => {
     reader.readAsText(event.target.files![0]);
   };
 
-  return <input type="file" onChange={handleFileChange} />;
+  return (
+    <Button>
+      <input
+        type="file"
+        id="file-upload"
+        onChange={handleFileChange}
+        className="hidden"
+      />
+      <label htmlFor="file-upload">
+        <FontAwesomeIcon icon={faFileArrowUp} className="h-6 w-6" />
+      </label>
+    </Button>
+  );
 };

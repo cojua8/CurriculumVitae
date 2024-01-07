@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 import { DataContext } from "./contexts/DataContext";
+import Button from "./base/Button";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const FileDownloadButton = () => {
   const { data } = useContext(DataContext);
@@ -16,8 +19,10 @@ export const FileDownloadButton = () => {
   };
 
   return (
-    <button type="button" onClick={handleFileChange}>
-      Descargar
-    </button>
+    <Button>
+      <button type="button" onClick={handleFileChange}>
+        <FontAwesomeIcon icon={faFileArrowDown} className="h-6 w-6" />
+      </button>
+    </Button>
   );
 };

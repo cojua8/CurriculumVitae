@@ -7,6 +7,7 @@ import { useState } from "react";
 import { CVData, DataContext } from "./components/contexts/DataContext";
 import { FileUploadButton } from "./components/FileUploadButton";
 import { FileDownloadButton } from "./components/FileDownloadButton";
+import StickyButtonGroup from "./components/base/StickyButtonGroup";
 
 library.add(fas, fab);
 
@@ -16,21 +17,25 @@ const App = () => {
   let [data, setData] = useState(context);
 
   return (
-    <div className="grid">
+    <div>
       <DataContext.Provider
         value={{
           data,
           setData,
         }}
       >
-        <FileUploadButton />
-        <FileDownloadButton />
-        <div className="grid md:grid-cols-6 lg:grid-cols-8">
-          <div className="md:col-span-2 p-3 bg-zinc-100">
-            <Sidebar />
-          </div>
-          <div className="p-3 md:col-span-4 lg:col-span-6">
-            <Experience />
+        <StickyButtonGroup>
+          <FileUploadButton />
+          <FileDownloadButton />
+        </StickyButtonGroup>
+        <div className="grid">
+          <div className="grid md:grid-cols-6 lg:grid-cols-8">
+            <div className="md:col-span-2 p-3 bg-zinc-100">
+              <Sidebar />
+            </div>
+            <div className="p-3 md:col-span-4 lg:col-span-6">
+              <Experience />
+            </div>
           </div>
         </div>
       </DataContext.Provider>
