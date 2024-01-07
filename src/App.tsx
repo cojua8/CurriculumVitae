@@ -8,6 +8,7 @@ import { CVData, DataContext } from "./components/contexts/DataContext";
 import { FileUploadButton } from "./components/FileUploadButton";
 import { FileDownloadButton } from "./components/FileDownloadButton";
 import StickyButtonGroup from "./components/base/StickyButtonGroup";
+import PrintButton from "./components/PrintButton";
 
 library.add(fas, fab);
 
@@ -27,6 +28,7 @@ const App = () => {
         <StickyButtonGroup>
           <FileUploadButton />
           <FileDownloadButton />
+          <PrintButton />
         </StickyButtonGroup>
         <div className="grid">
           <div className="grid md:grid-cols-6 lg:grid-cols-8">
