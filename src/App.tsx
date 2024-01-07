@@ -6,6 +6,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 import { CVData, DataContext } from "./components/contexts/DataContext";
 import { FileUploadButton } from "./components/FileUploadButton";
+import { FileDownloadButton } from "./components/FileDownloadButton";
 
 library.add(fas, fab);
 
@@ -23,6 +24,7 @@ const App = () => {
         }}
       >
         <FileUploadButton />
+        <FileDownloadButton />
         <div className="grid md:grid-cols-6 lg:grid-cols-8">
           <div className="md:col-span-2 p-3 bg-zinc-100">
             <Sidebar />
