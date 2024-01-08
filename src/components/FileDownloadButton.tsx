@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { DataContext } from "./contexts/DataContext";
-import Button from "./base/Button";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
+import Button from "./base/Button";
+import { DataContext } from "./contexts/DataContext";
 
 export const FileDownloadButton = () => {
   const { data } = useContext(DataContext);

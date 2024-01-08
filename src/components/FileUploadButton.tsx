@@ -1,8 +1,8 @@
-import React, { ChangeEvent, useContext } from "react";
-import { DataContext } from "./contexts/DataContext";
-import Button from "./base/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ChangeEvent, useContext } from "react";
+import Button from "./base/Button";
+import { DataContext } from "./contexts/DataContext";
 
 export const FileUploadButton = () => {
   const { setData } = useContext(DataContext);
