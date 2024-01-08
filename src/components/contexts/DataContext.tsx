@@ -67,13 +67,13 @@ export const DataContext = createContext(
 
 export type {
   CVData,
-  PersonalDataContextProps,
-  StringPersonalData,
   EmailPersonalData,
-  UrlPersonalData,
+  ExperienceActivityProps,
+  ExperienceItemProps,
+  ExperienceSectionProps,
   IconParams,
   LanguageProps,
-  ExperienceSectionProps,
-  ExperienceItemProps,
-  ExperienceActivityProps,
+  PersonalDataContextProps,
+  StringPersonalData,
+  UrlPersonalData,
 };

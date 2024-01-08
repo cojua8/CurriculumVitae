@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
-import { DataContext } from "./contexts/DataContext";
-import Button from "./base/Button";
-import { faFileArrowDown, faPrint } from "@fortawesome/free-solid-svg-icons";
+import { faPrint } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "./base/Button";
 
 const PrintButton = () => {
   return (

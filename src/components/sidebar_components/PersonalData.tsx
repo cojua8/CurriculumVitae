@@ -1,13 +1,13 @@
 import { useContext } from "react";
+import Icon from "../Icon";
 import {
+  DataContext,
   EmailPersonalData,
   IconParams,
   PersonalDataContextProps,
   StringPersonalData,
   UrlPersonalData,
-  DataContext,
 } from "../contexts/DataContext";
-import Icon from "../Icon";
 
 interface PersonalDataProps {
   icon: IconParams;

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ExperienceSectionProps, DataContext } from "./contexts/DataContext";
+import { DataContext, ExperienceSectionProps } from "./contexts/DataContext";
 import ExperienceSection from "./experience_components/ExperienceSection";
 
 const Experience = () => {
