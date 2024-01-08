@@ -7,7 +7,7 @@ import Skills from "./sidebar_components/Skills";
 import { DataContext } from "./contexts/DataContext";
 
 const Sidebar = () => {
-  const name: String = useContext(DataContext).data.personalData.name;
+  const name: string = useContext(DataContext).data.personalData.name;
   return (
     <div>
       <p className="text-4xl lg:text-5xl mb-7 font-bold">{name}</p>
