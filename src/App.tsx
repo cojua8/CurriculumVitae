@@ -1,21 +1,22 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import Experience from "./components/Experience";
-import Sidebar from "./components/Sidebar";
-import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { CVData, DataContext } from "./components/contexts/DataContext";
-import { FileUploadButton } from "./components/FileUploadButton";
+import Experience from "./components/Experience";
 import { FileDownloadButton } from "./components/FileDownloadButton";
-import StickyButtonGroup from "./components/base/StickyButtonGroup";
+import { FileUploadButton } from "./components/FileUploadButton";
 import PrintButton from "./components/PrintButton";
+import Sidebar from "./components/Sidebar";
+import StickyButtonGroup from "./components/base/StickyButtonGroup";
+import { CVData, DataContext } from "./components/contexts/DataContext";
+import context_data from "./data.json";
 
 library.add(fas, fab);
 
 const App = () => {
-  let context: CVData = require("./data.json");
+  const context: CVData = context_data;
 
-  let [data, setData] = useState(context);
+  const [data, setData] = useState(context);
 
   return (
     <div>
