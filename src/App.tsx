@@ -14,7 +14,7 @@ import context_data from "./data.json";
 library.add(fas, fab);
 
 const App = () => {
-  const context: CVData = context_data;
+  const context = context_data as CVData;
 
   const [data, setData] = useState(context);
 
