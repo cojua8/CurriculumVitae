@@ -1,7 +1,7 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Experience from "./components/Experience";
 import { FileDownloadButton } from "./components/FileDownloadButton";
 import { FileUploadButton } from "./components/FileUploadButton";
@@ -9,14 +9,21 @@ import PrintButton from "./components/PrintButton";
 import Sidebar from "./components/Sidebar";
 import StickyButtonGroup from "./components/base/StickyButtonGroup";
 import { CVData, DataContext } from "./components/contexts/DataContext";
-import context_data from "./data.json";
 
 library.add(fas, fab);
 
 const App = () => {
-  const context = context_data as CVData;
+  const [data, setData] = useState<CVData | null>(null);
 
-  const [data, setData] = useState(context);
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data.json`)
+      .then((response) => response.json())
+      .then((data) => setData(data as CVData));
+  }, []);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
