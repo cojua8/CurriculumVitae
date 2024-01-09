@@ -1,30 +1,20 @@
 import { useContext } from "react";
 import { DataContext } from "./contexts/DataContext";
-import Languages from "./sidebar_components/Languages";
 import PersonalData from "./sidebar_components/PersonalData";
-import Profile from "./sidebar_components/Profile";
 import SidebarItem from "./sidebar_components/SidebarItem";
-import Skills from "./sidebar_components/Skills";
 
 const Sidebar = () => {
-  const name: string = useContext(DataContext).data.personalData.name;
+  const { data } = useContext(DataContext);
   return (
     <div>
-      <p className="text-4xl lg:text-5xl mb-7 font-bold">{name}</p>
+      <p className="text-4xl lg:text-5xl mb-7 font-bold">
+        {data.personalData.name}
+      </p>
+      <PersonalData />
 
-      <SidebarItem>
-        <PersonalData />
-      </SidebarItem>
-      <SidebarItem title="Perfil">
-        <Profile />
-      </SidebarItem>
-
-      <SidebarItem title="Competencias">
-        <Skills />
-      </SidebarItem>
-      <SidebarItem title="Idiomas">
-        <Languages />
-      </SidebarItem>
+      {data.sidebar.map((item, index) => {
+        return <SidebarItem data={item} key={index} />;
+      })}
     </div>
   );
 };

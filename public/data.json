@@ -23,9 +23,23 @@
       }
     ]
   },
-  "profile": ["Your profile goes here."],
-  "skills": ["Your", "List", "Of", "Skills"],
-  "languages": [{ "name": "English", "level": "Native" }],
+  "sidebar": [
+    {
+      "type": "text",
+      "title": "Text item",
+      "text": ["Text or list of texts"]
+    },
+    {
+      "type": "pills",
+      "title": "Pills",
+      "items": ["Your", "Pills"]
+    },
+    {
+      "type": "list",
+      "title": "A List",
+      "items": [{ "key": "key", "value": "value" }]
+    }
+  ],
   "experience": [
     {
       "icon": { "name": "briefcase" },

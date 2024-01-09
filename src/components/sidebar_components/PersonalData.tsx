@@ -38,18 +38,24 @@ const PersonalData = () => {
   );
 
   return (
-    <ul className="list-none">
-      {data.map(({ icon, value }: PersonalDataProps, index) => {
-        return (
-          <li className="mt-3" key={index}>
-            <div className="flex flex-row">
-              <Icon name={icon.name} family={icon.family} style={icon.style} />
-              <div>{value}</div>
-            </div>
-          </li>
-        );
-      })}
-    </ul>
+    <div className="ml-2 mb-5">
+      <ul className="list-none">
+        {data.map(({ icon, value }: PersonalDataProps, index) => {
+          return (
+            <li className="mt-3" key={index}>
+              <div className="flex flex-row">
+                <Icon
+                  name={icon.name}
+                  family={icon.family}
+                  style={icon.style}
+                />
+                <div>{value}</div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 

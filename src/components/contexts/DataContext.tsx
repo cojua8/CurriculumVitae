@@ -22,9 +22,9 @@ interface IconParams {
   family?: string | undefined;
 }
 
-interface LanguageProps {
-  name: string;
-  level: string;
+interface ListProps {
+  key: string;
+  value: string;
 }
 
 interface PersonalDataContextProps {
@@ -50,14 +50,28 @@ interface ExperienceSectionProps {
   items: ExperienceItemProps[];
 }
 
+interface SidebarTextProps {
+  type: "text";
+  title: string;
+  text: string | string[];
+}
+interface SidebarPillsProps {
+  type: "pills";
+  title: string;
+  items: string[];
+}
+interface SidebarListProps {
+  type: "list";
+  title: string;
+  items: ListProps[];
+}
+
 interface CVData {
   personalData: {
     name: string;
     personalDataItems: PersonalDataContextProps[];
   };
-  profile: string[];
-  skills: string[];
-  languages: LanguageProps[];
+  sidebar: (SidebarTextProps | SidebarPillsProps | SidebarListProps)[];
   experience: ExperienceSectionProps[];
 }
 
@@ -72,8 +86,11 @@ export type {
   ExperienceItemProps,
   ExperienceSectionProps,
   IconParams,
-  LanguageProps,
+  ListProps,
   PersonalDataContextProps,
+  SidebarListProps,
+  SidebarPillsProps,
+  SidebarTextProps,
   StringPersonalData,
   UrlPersonalData,
 };
