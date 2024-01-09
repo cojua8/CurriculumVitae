@@ -1,0 +1,48 @@
+{
+  "personalData": {
+    "name": "Your Name",
+    "personalDataItems": [
+      {
+        "icon": { "name": "question" },
+        "value": { "type": "text", "value": "Miscelaneous info" }
+      },
+      {
+        "icon": { "name": "envelope" },
+        "value": {
+          "type": "email",
+          "value": "your@email.com"
+        }
+      },
+      {
+        "icon": { "name": "globe" },
+        "value": {
+          "type": "url",
+          "value": "https://some_url",
+          "showName": "some url"
+        }
+      }
+    ]
+  },
+  "profile": ["Your profile goes here."],
+  "skills": ["Your", "List", "Of", "Skills"],
+  "languages": [{ "name": "English", "level": "Native" }],
+  "experience": [
+    {
+      "icon": { "name": "briefcase" },
+      "title": "An Experience Group Title",
+      "items": [
+        {
+          "company": "The institution",
+          "title": "Position",
+          "dateFrom": "Date from",
+          "dateTo": "Date to (not required)",
+          "activities": [
+            {
+              "description": "Activities description"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
