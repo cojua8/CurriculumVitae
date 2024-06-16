@@ -1,13 +1,13 @@
-import ExperienceItem from "./ExperienceItem";
+import Icon from "../Icon";
 import {
   ExperienceItemProps,
   ExperienceSectionProps,
 } from "../contexts/DataContext";
-import Icon from "../Icon";
+import ExperienceItem from "./ExperienceItem";
 
 const ExperienceSection = ({ icon, title, items }: ExperienceSectionProps) => {
   return (
-    <div className="mb-5 ">
+    <div className="mb-5 never-split">
       <div className="flex flex-row text-2xl items-center">
         <Icon name={icon.name} family={icon.family} style={icon.style} />
         <p className="font-bold">{title}</p>

@@ -2,6 +2,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import "./App.css";
 import Experience from "./components/Experience";
 import { FileDownloadButton } from "./components/FileDownloadButton";
 import { FileUploadButton } from "./components/FileUploadButton";

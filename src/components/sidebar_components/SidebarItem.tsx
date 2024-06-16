@@ -23,7 +23,7 @@ const SidebarItem = ({ data }: SidebarItemProps) => {
   }
 
   return (
-    <div className="mb-5">
+    <div className="mb-5 never-split">
       {data.title ? (
         <div className="mb-2">
           <div className="font-bold text-2xl">{data.title}</div>

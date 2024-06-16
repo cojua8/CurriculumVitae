@@ -11,7 +11,7 @@ const ExperienceItem = ({
   activities,
 }: ExperienceItemProps) => {
   return (
-    <div className="pl-3 pb-3 pt-1 hover:bg-zinc-100">
+    <div className="pl-3 pb-3 pt-1 hover:bg-zinc-100 never-split">
       <div className="flex flex-row items-center justify-between text-[11px] mb:text-xs mb-[-5px]">
         <p>{dateTo ? `${dateFrom} -  ${dateTo}` : dateFrom}</p>
         <p>{company}</p>
